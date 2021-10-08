@@ -1,15 +1,34 @@
 import React, { Component } from 'react';
+import axios from 'axios';
+import DisplaySongs from './components/DisplaySongs/DisplaySongs';
 
 
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {  }
+    this.state = { 
+      songs:[]
+     }
   }
+
+  componentDidMount(){
+    this.getAllSongs();
+  }
+
+  async getAllSongs(){
+    let response= await axios.get('http://127.0.0.1:8000/music/');
+    this.setState({
+      songs:response.data
+    })
+    console.log("Response: ", response.data)
+  }
+
   render() { 
     return (  
       <div>
-        <h1>hello</h1>
+        <DisplaySongs songs= {this.state.songs}/>
+        
+        
       </div>
     );
   }
