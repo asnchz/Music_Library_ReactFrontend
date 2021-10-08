@@ -24,6 +24,7 @@ class DisplaySongs extends Component {
                     <th>Artist</th>
                     <th>Genre</th>
                     <th>Release Date</th>
+                    <th>Delete</th>
                 </tr>
                 </thead>
             <tbody>
@@ -35,6 +36,7 @@ class DisplaySongs extends Component {
                     <td>{song.artist}</td>
                     <td>{song.genre}</td>
                     <td>{song.release_date}</td>
+                    <button className="btn btn-danger" onClick={() => this.props.handleDelete(song.id)}>Delete</button>
                 </tr>)}
                 )}
             </tbody>

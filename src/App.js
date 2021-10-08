@@ -23,6 +23,18 @@ class App extends Component {
     console.log("Response: ", response.data)
   }
 
+  handleDelete = async(id) =>{
+    const path =('http://127.0.0.1:8000/music/${id}/')
+    await axios.delete(path.then(res=>{
+      this.setState({
+        songs:res.data
+      })
+    }))
+    .catch(err => {
+      console.log(err);
+    })
+  }
+
   render() { 
     return (  
       <div>

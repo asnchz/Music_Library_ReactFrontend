@@ -30,3 +30,13 @@ h1{
     text-shadow: 4px 4px 10px #3e6443;
     font-variant: small-caps;
 }
+button {
+    background-color: #3e6443;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+  }
+  
