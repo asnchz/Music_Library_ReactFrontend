@@ -1,19 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './DisplaySongs.css'
 
-class DisplaySongs extends Component {
-    constructor(props) {
-        super(props);
-        this.state = { 
-            title: '',
-            album:'',
-            artist:'',
-            genre:'',
-            release_date:'',
-        }
-    }
-    render() { 
+const DisplaySongs = (props)=>{
+
         return ( 
+            <React.Fragment>
             <div>
                 <h1>Music Library</h1>
             <table id='table'>
@@ -28,7 +19,7 @@ class DisplaySongs extends Component {
                 </tr>
                 </thead>
             <tbody>
-                {this.props.songs.map((song, index) => {
+                {props.songs.map((song, index) => {
                 return(
                 <tr key={index}>
                     <td>{song.title}</td>
@@ -36,14 +27,14 @@ class DisplaySongs extends Component {
                     <td>{song.artist}</td>
                     <td>{song.genre}</td>
                     <td>{song.release_date}</td>
-                    <button className="btn btn-danger" onClick={() => this.props.handleDelete(song.id)}>Delete</button>
+                    <button className="btn btn-danger" onClick={() => props.handleDelete(song.id)}>Delete</button>
                 </tr>)}
                 )}
             </tbody>
             </table>
           </div>
+          </React.Fragment>
         );
-    }
 }
  
 export default DisplaySongs;
