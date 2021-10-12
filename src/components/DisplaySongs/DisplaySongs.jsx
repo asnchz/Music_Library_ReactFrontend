@@ -4,7 +4,6 @@ import './DisplaySongs.css'
 const DisplaySongs = (props)=>{
 
         return ( 
-            <React.Fragment>
             <div>
                 <h1>Music Library</h1>
             <table id='table'>
@@ -19,9 +18,9 @@ const DisplaySongs = (props)=>{
                 </tr>
                 </thead>
             <tbody>
-                {props.songs.map((song, index) => {
+                {props.songs.map(song => {
                 return(
-                <tr key={index}>
+                <tr key={song.id}>
                     <td>{song.title}</td>
                     <td>{song.album}</td>
                     <td>{song.artist}</td>
@@ -33,7 +32,6 @@ const DisplaySongs = (props)=>{
             </tbody>
             </table>
           </div>
-          </React.Fragment>
         );
 }
  
