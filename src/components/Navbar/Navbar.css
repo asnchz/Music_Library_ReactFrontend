@@ -1,0 +1,24 @@
+.backgrd{
+    background-image:url(/src/components/Images/Mac.gif);
+    height: 100vh;
+    width: 98vw center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.header{
+
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-variant: small-caps;
+    display: flex;
+}
+h2{
+    text-align:left;
+    color: white;
+    font-variant: small-caps;
+    margin-top: auto;
+}

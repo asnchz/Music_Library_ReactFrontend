@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import DisplaySongs from './components/DisplaySongs/DisplaySongs';
 import CreateSong from './components/CreateSong/CreateSong';
+import Navbar from './components/Navbar/Navbar';
+import './App.css';
 
 
 class App extends Component {
@@ -25,7 +27,7 @@ class App extends Component {
   }
 
   handleDelete= async(song) =>{
-    let response = await axios.delete('http://127.0.0.1:8000/music/' + song)
+    let response = await axios.delete('http://127.0.0.1:8000/music/' + song +'/')
     this.setState();
     return response.status
   }
@@ -45,7 +47,8 @@ class App extends Component {
 
   render() { 
     return (  
-      <div>
+      <div className='background'>
+        <Navbar/>
         <DisplaySongs songs= {this.state.songs} handleDelete={this.handleDelete} updateSongList={this.updateSongList}/>
         <CreateSong createSong= {this.createSong}/>
         

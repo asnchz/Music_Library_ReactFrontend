@@ -26,12 +26,12 @@ const DisplaySongs = (props)=>{
                     <td>{song.artist}</td>
                     <td>{song.genre}</td>
                     <td>{song.release_date}</td>
-                    <button className="btn btn-danger" onClick={() => props.handleDelete(song.id)}>Delete</button>
+                    <td><button className="btn btn-danger" onClick={() => props.handleDelete(song.id)}>Delete</button></td>
                 </tr>)}
                 )}
             </tbody>
             </table>
-          </div>
+            </div>
         );
 }
  
