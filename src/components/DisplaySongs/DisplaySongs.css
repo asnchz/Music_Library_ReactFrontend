@@ -4,6 +4,7 @@
     font-variant: small-caps;
     text-align: center;
     margin: 0 auto;
+    font-size: 400;
 }
   
 #table td, #table th {
@@ -11,6 +12,7 @@
     padding: 8px;
     font-variant: small-caps;
     background-color: #f2f2f2;
+    
 }
 
 #table th {

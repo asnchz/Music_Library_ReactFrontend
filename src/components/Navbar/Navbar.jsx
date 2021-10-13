@@ -8,6 +8,10 @@ const Navbar = () => {
             <div className='backgrd'>
             <CssBaseline/>
             <h2 className='navtitle'>MyMusic.</h2>
+            <div className='title'>
+                <h3>welcome to <br/>
+                my music.</h3>
+                </div>
             </div>
         </React.Fragment>
     );

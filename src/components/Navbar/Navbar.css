@@ -22,3 +22,10 @@ h2{
     font-variant: small-caps;
     margin-top: auto;
 }
+h3{
+    color:white;
+    font-size: 4rem;
+    text-align: center;
+    margin-top:12%;
+    text-shadow: 4px 4px 10px #ec4411;
+}

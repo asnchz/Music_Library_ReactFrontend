@@ -30,16 +30,16 @@ class CreateSong extends Component {
         return ( 
             <form className='newsong' onSubmit={this.handleSumbit}>
                 <h1>What's Your Favorite Song?</h1>
-                <label>Title</label>
-                <input  name="title" onChange={this.handleChange} value={this.state.title}/>
-                <label>Artist</label>
-                <input name="artist" onChange={this.handleChange} value={this.state.artist}/>
-                <label>Album</label>
-                <input name="album" onChange={this.handleChange} value={this.state.album}/>
-                <label>Genre</label>
-                <input name="genre" onChange={this.handleChange} value={this.state.genre}/>
-                <label>Release Date</label>
-                <input name="release_date" onChange={this.handleChange} value={this.state.release_date}/>
+                <label> Title </label>
+                <input  name="title" onChange={this.handleChange} value={this.state.title}/><br/>
+                <label> Artist </label>
+                <input name="artist" onChange={this.handleChange} value={this.state.artist} /><br/>
+                <label> Album </label>
+                <input name="album" onChange={this.handleChange} value={this.state.album} /><br/>
+                <label> Genre </label>
+                <input name="genre" onChange={this.handleChange} value={this.state.genre} /><br/>
+                <label> Release Date </label>
+                <input name="release_date" onChange={this.handleChange} value={this.state.release_date} /><br/>
                 <button className='button1' type='Submit'>Add New Song!</button>
             </form>
     )}
